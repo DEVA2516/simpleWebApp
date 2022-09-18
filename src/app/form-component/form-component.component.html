@@ -1,0 +1,14 @@
+<div class="user_input">
+
+        <label for="unmae">User Name : </label> 
+        <input type="text" id ="uname" (keyup) = onKeyUp($event) [(ngModel)] = "userName" > 
+</div>
+<br>
+
+<p> UserName = {{userName}}</p>
+
+
+<div class = "btn">
+    
+    <button [disabled] ="btnDisabled"  (click) = onbtnclick()>click me</button>
+</div>
