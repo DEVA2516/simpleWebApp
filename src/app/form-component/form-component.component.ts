@@ -8,23 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class FormComponentComponent implements OnInit {
 
   userName : string = '';
-  btnDisabled:boolean = true;
-  
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onKeyUp(event:any){
-    if(event.target.value != null){
-      this.btnDisabled = false
-    }
-  }
-
   onbtnclick(){
     this.userName = "";  
-    this.btnDisabled = true;  
   }
 
 }

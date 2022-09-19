@@ -1,7 +1,7 @@
 <div class="user_input">
 
         <label for="unmae">User Name : </label> 
-        <input type="text" id ="uname" (keyup) = onKeyUp($event) [(ngModel)] = "userName" > 
+        <input type="text" id ="uname" [(ngModel)] = "userName" > 
 </div>
 <br>
 
@@ -10,5 +10,5 @@
 
 <div class = "btn">
     
-    <button [disabled] ="btnDisabled"  (click) = onbtnclick()>click me</button>
+    <button [disabled] ="!userName"  (click) = onbtnclick()>click me</button>
 </div>
