@@ -6,17 +6,28 @@
     margin-top: 100px;
 }
 
-p {
-        /* position:absolute;
+p,.btn{
+    /* position:absolute;
         top:100px; */
-        display: flex;
-        justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 label {
     padding: 7px;
 }
-.btn {
+
+/* .btn {
     display: flex;
     justify-content: center;
+} */
+
+.isActive {
+    font-size: 25px;
+    color :blueviolet
+}
+
+.inActive {
+    font-size:20px ;
+    color: burlywood;
 }

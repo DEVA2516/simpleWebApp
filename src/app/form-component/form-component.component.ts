@@ -7,15 +7,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponentComponent implements OnInit {
 
-  userName : string = '';
+  userName: string = '';
+  pTagStyle: object = { 'color': 'blue ' };
+  vehicles: Array<string> = ["bike", 'car', 'cycle', 'jeep'];
+  arrayOfVechicles: Array<any> = [{ 'id': 1, 'name': 'bike' },
+  { 'id': 2, 'name': 'car' },
+  { 'id': 3, 'name': 'jeep' }];
+  isActive: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onbtnclick(){
-    this.userName = "";  
+  onbtnclick(): void {
+    this.userName = "";
+    console.log(this.arrayOfVechicles[0]['id']);
+  }
+
+  toggle(): void {
+    this.isActive = !this.isActive;
   }
 
 }

@@ -1,14 +1,51 @@
 <div class="user_input">
 
-        <label for="unmae">User Name : </label> 
-        <input type="text" id ="uname" [(ngModel)] = "userName" > 
+    <label for="unmae">User Name : </label>
+    <input type="text" [(ngModel)]="userName">
 </div>
 <br>
 
 <p> UserName = {{userName}}</p>
 
 
-<div class = "btn">
-    
-    <button [disabled] ="!userName"  (click) = onbtnclick()>click me</button>
+<div class="btn">
+
+    <button [disabled]="!userName" (click)=onbtnclick()>click me</button>
+
 </div>
+
+<!-- <p [ngStyle]="{'color':'red'}">Angular directives attributes ngStyle & nyClasss</p>
+
+<p [ngStyle]="pTagStyle">Angular directives attributes ngStyle & nyClasss</p> -->
+
+<p [ngStyle]="{'color':isActive ? 'green':'lightgrey'}" (click)="toggle()">Angular directives attributes ngStyle &
+    nyClasss</p>
+
+<!-- <p [ngClass]="'inActive'">Angular directives attributes ngStyle & nyClasss</p>
+
+<p  [ngClass]="isActive? 'isActive':'inActive'">Angular directives attributes ngStyle & nyClasss</p> -->
+
+
+<p (click)="isActive = !isActive" [ngClass]="isActive? 'isActive':'inActive'">Angular directives attributes ngStyle &
+    nyClasss</p>
+
+
+<!-- <p *ngIf="isActive" ngClass="isActive">Structural directives ngIf & ngFor</p>
+<p *ngIf="!isActive" ngClass="inActive">Structural directives ngIf & ngFor</p> -->
+
+
+<p *ngIf="isActive; else elsePart" > Structural directive ngIf & ngFor</p>
+<ng-template #elsePart > This is else block</ng-template>
+
+<ul>
+    <!-- <li>bike</li>
+    <li>car</li>
+    <li>Cycle</li>
+    <li>Jeep</li> -->
+
+    <li *ngFor="let vehicle of vehicles, index as i,even as isEven "  [ngClass]="isEven? 'isActive':'inActive'">{{i}}-{{vehicle}} - </li>
+    <!-- <li *ngFor="let vehicle of vehicles, index as i,odd as isOdd "  [ngClass]="isOdd? 'isActive':'inActive'">{{i}}-{{vehicle}} - </li> -->
+    
+    <li *ngFor="let vehicleObj of arrayOfVechicles">{{vehicleObj | json}} - {{vehicleObj.id}}</li>
+
+</ul>
