@@ -1,0 +1,16 @@
+
+
+    <div class="user">
+        <div class="profilePic">
+            <img [src]="user.profileUrl" alt="profile Pic">
+        </div>
+        <div class="userDetail">
+            <p class="name">{{user.firstName}} {{user.lastName}}</p>
+            <p class="email">{{user.email}}</p>
+
+        </div>
+        <div class="removeUser">
+            <span class="rmuser" (click)="removeUser()">remove User</span>
+        </div>
+
+    </div>

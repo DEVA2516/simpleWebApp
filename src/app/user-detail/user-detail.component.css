@@ -1,0 +1,23 @@
+.user {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+    margin:2px;
+}
+
+img{
+    display: flex;
+    width: 108px;
+    border-radius: 50px;
+}
+
+.userDetail {
+    padding: 7px;
+}
+
+.removeUser {
+    background-color: burlywood;
+    cursor: pointer;
+}

@@ -1,0 +1,6 @@
+
+<ng-container *ngFor="let user of usersList, index as i">
+
+    <app-user-detail class="appUser" [user] = "user" [userIndex]="i" (removeUserEvent)="removedUser($event)"></app-user-detail>
+
+</ng-container>

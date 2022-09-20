@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'simpleWebApp';
+  userData = {'userId':1,'userName':'abc'};
+  users:any= ["user 1", "user 2"];
+
+  constructor() { }
+
+  changeItem() {
+    this.userData = {'userId':2,'userName':'cdef'};
+  }
+
+  newUserEmitted(event:any){
+    this.users.push(event)
+    console.log(event);
+  }
 }
