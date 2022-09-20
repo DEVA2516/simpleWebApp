@@ -1,0 +1,6 @@
+<!-- <p>list-input works!</p> -->
+<input type="text" [(ngModel)]="listInput">
+<button (click)="sendInput()">submit</button>
+<ng-container *ngFor="let task of tasksList" >
+    <app-list-detail [liInput]="task"></app-list-detail>
+</ng-container>

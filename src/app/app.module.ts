@@ -10,6 +10,8 @@ import { ChildComponent } from './child/child.component';
 import { UserComponent } from './user/user.component';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { ListInputComponent } from './list-input/list-input.component';
+import { ListDetailComponent } from './list-detail/list-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     UserComponent,
     UsersListComponent,
     UserDetailComponent,
+    ListInputComponent,
+    ListDetailComponent,
   ],
   imports: [
     BrowserModule,
